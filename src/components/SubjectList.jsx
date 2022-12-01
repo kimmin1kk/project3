@@ -13,7 +13,7 @@ function SubjectList({
         검색할 과제명 입력 :
         <input
           type="text"
-          placeholder="입력할 과제명"
+          placeholder="Text Here!"
           value={txtFind}
           onChange={(event) => setFind(event.target.value)}
         ></input>

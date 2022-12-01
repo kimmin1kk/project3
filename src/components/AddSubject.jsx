@@ -1,28 +1,22 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import styles from "../styles/AddSubject.module.css";
+//Create, Routing 완료
 
-function SubjectInputForm({
-  id = "",
-  lecture = "",
-  sbjt = "",
-  deadline = "",
-  content = "",
-  onUpdate = (f) => f,
-}) {
-  const [txtLecture, setLecture] = useState(lecture);
-  const [txtSubject, setSubject] = useState(sbjt);
-  const [txtDeadline, setDeadline] = useState(deadline);
-  const [txtContent, setContent] = useState(content);
+function AddSubject({ lecture, sbjt, deadline, content, onAddSubject }) {
+  const [txtLecture, setLecture] = useState("");
+  const [txtSubject, setSubject] = useState("");
+  const [txtDeadline, setDeadline] = useState("");
+  const [txtContent, setContent] = useState("");
 
   const onSubmit = (event) => {
     event.preventDefault();
-    onUpdate(id, txtLecture, txtSubject, txtDeadline, txtContent);
+    onAddSubject(txtLecture, txtSubject, txtDeadline, txtContent);
     setLecture("");
     setSubject("");
     setDeadline("");
     setContent("");
   };
-
   return (
     <div>
       <form onSubmit={onSubmit}>
@@ -41,19 +35,31 @@ function SubjectInputForm({
         <input
           type="date"
           value={txtDeadline}
-          placeholder="마감 날짜를 정해주세요"
+          placeholder="마감날짜를 정해주세요"
           onChange={(event) => setDeadline(event.target.value)}
         ></input>
         <textarea
           rows="20"
           cols="100"
           value={txtContent}
+          placeholder="세부내용을 적어주세요"
           onChange={(event) => setContent(event.target.value)}
         ></textarea>
-        <input type="submit" value={"수정"}></input>
+        <button type="submit" className={styles.add}>
+          <span class="material-symbols-outlined">done</span>
+        </button>
       </form>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Link to="/">
+        <span>돌아가기</span>
+      </Link>
     </div>
   );
 }
 
-export default SubjectInputForm;
+export default AddSubject;

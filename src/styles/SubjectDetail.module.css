@@ -1,0 +1,23 @@
+.sblock {
+  border: 2px solid rgb(79, 82, 83);
+}
+
+.editbtn {
+  position: relative;
+  top: -30px;
+  right: -350px;
+}
+.canbtn {
+  position: relative;
+  top: -139px;
+  right: -430px;
+}
+
+.detailbox {
+  width: 800px;
+  border: 1px solid #333;
+  box-shadow: 8px 8px 5px #444;
+  padding: 8px 12px;
+  margin: auto;
+  font-size: 12px;
+}

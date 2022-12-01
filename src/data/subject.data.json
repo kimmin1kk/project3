@@ -4,13 +4,22 @@
       "id": "sdfadsf",
       "lecture": "소프트웨어개발실습2",
       "sbjt": "개인 프로젝트 만들기",
-      "deadline": "11/25"
+      "deadline": "2022-11-09",
+      "content": "개인 프로젝트 일정\n- 프로젝트 기획 및 계획서 제출(~11/27)\n\n- 프로젝트 구현 및 소스코드 제출(~12/6)\n\n- 프로젝트 시연(12/7)\n\n- 프로젝트 보완 및 결과보고 제출(~12/10)\n\n  * 계획서 및 결과보고서 양식은 과제 공지 시 업로드 예정"
     },
     {
       "id": "eofejfo",
       "lecture": "소프트웨어실무영어",
-      "sbjt": "포트폴리오 작성",
-      "deadline": "12/7"
+      "sbjt": "Homework 1",
+      "deadline": "2022-11-29",
+      "content": "Hello,\n\nThis is Homework 1.\n\nSubmit homework to e-class.\n\nHomework can be typed or handwritten.\n\nIf it is typed, submit the file.\n\nIf it is handwritten, submit a photo.\n\nPlease make sure your NAME is in the filename and on the homework.\n\nIf you have questions, please send me a message.\n\nGood luck and hope to see you in class.\n\nRegards,"
+    },
+    {
+      "id": "eofejfddo",
+      "lecture": "컴퓨터네트워크",
+      "sbjt": "OSS 커뮤니티 과제",
+      "deadline": "2022-12-07",
+      "content": "동서대학교 OSS 커뮤니티 (https://cafe.naver.com/dsuoss) 가입을 하고,\n\nwireshark 게시판 중 (자료(정보)공유, Q&A)에 1개의 게시글과 1개 이상의 댓글을 달고 해당 내용에 대해서 캡처를 해서 올리기 바랍니다.\n\n\n\n실제로 컴퓨터네트워크 관련된 질문, 카카오 사태와 관련된 내용, Wireshark 와 관련된 내용 등 수업시간과 관련된 내용은 모두 가능합니다.\n\n\n\n과제 제출은 수업콘텐츠 13주차 1차시에 제출해주면 됩니다,."
     }
   ]
 }
