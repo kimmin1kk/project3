@@ -3,6 +3,38 @@
   font-size: 12px;
 }
 
+.mablock {
+  display: inline-block;
+  border: 2px solid #b4b7d1;
+  margin-top: 50px;
+  background-color: #d7dcf8;
+  border-radius: 20px;
+}
+
 .sblock {
-  border: 2px solid rgb(79, 82, 83);
+  border: 2px solid #d7dcf8;
+  border-radius: 20px;
+  margin-left: 50px;
+  margin-right: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: #d7dcf8;
+  display: inline-block;
+}
+
+.rmvbtn {
+  background-color: #a2a8d3;
+  border: 2px solid #e7e7e7;
+  border-radius: 10px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  padding: 3px 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+.rmvbtn:hover {
+  background-color: #f95959;
+  color: white;
 }

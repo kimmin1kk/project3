@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SubjectListItem from "./SubjectListItem";
+import styles from "../styles/SubjectList.module.css";
 
 function SubjectList({
   subjects = [],
@@ -10,10 +11,10 @@ function SubjectList({
   return (
     <div>
       <label>
-        검색할 과제명 입력 :
         <input
+          className={styles.sbar}
           type="text"
-          placeholder="Text Here!"
+          placeholder="검색할 과제 입력"
           value={txtFind}
           onChange={(event) => setFind(event.target.value)}
         ></input>

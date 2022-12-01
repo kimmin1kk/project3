@@ -1,0 +1,10 @@
+.sbar {
+  height: 32px;
+  border-radius: 48px;
+  border: 0.5px solid lightgrey;
+  width: 30%;
+
+  position: relative;
+  top: -90px;
+  display: inline-block;
+}
