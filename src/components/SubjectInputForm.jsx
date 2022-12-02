@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "../styles/SubjectInputForm.module.css";
 
 function SubjectInputForm({
@@ -25,7 +26,7 @@ function SubjectInputForm({
         return sub.id === id;
       })
     );
-  });
+  }, [id]);
 
   const changeSubjects = (key, value) => {
     setSubjects((current) => {
@@ -38,6 +39,8 @@ function SubjectInputForm({
   // const [txtSubject, setSubject] = useState(sbjt);
   // const [txtDeadline, setDeadline] = useState(deadline);
   // const [txtContent, setContent] = useState(content);
+
+  const navigation = useNavigate();
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -52,6 +55,7 @@ function SubjectInputForm({
     changeSubjects("subject", "");
     changeSubjects("deadline", "");
     changeSubjects("content", "");
+    navigation(`/updater/${id}`);
 
     // setLecture("");
     // setSubject("");

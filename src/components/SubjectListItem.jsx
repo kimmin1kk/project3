@@ -38,7 +38,7 @@ function SubjectListItem({
           </p>
         </h3>
         <button onClick={handleClick} className={styles.rmvbtn}>
-          <span class="material-symbols-outlined">delete_forever</span>
+          <span className="material-symbols-outlined">delete_forever</span>
         </button>
       </div>
 

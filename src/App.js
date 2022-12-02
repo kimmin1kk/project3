@@ -13,6 +13,7 @@ import Main from "./components/Main";
 import PageNotFound from "./components/PageNotFound";
 import AddSubject from "./components/AddSubject";
 import SubjectDetail from "./components/SubjectDetail";
+import Updater from "./components/Updater";
 // import NewSubjectForm from "./components/NewSubjectForm";
 // import SubjectInfo from "./components/SubjectInfo";
 
@@ -69,6 +70,7 @@ function App() {
           path="/add"
           element={<AddSubject onAddSubject={addSubject}></AddSubject>}
         />
+        <Route path="/updater/:id" element={<Updater></Updater>}></Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       {/* <SubjectList

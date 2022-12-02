@@ -16,7 +16,7 @@ function Main({
   return (
     <div>
       <button onClick={() => navigateToAddSbjt()} className={styles.addbutton}>
-        <span class="material-symbols-outlined">assignment_add</span>
+        <span className="material-symbols-outlined">assignment_add</span>
       </button>
 
       <SubjectList

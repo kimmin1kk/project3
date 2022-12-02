@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "../styles/AddSubject.module.css";
 //Create, Routing 완료
 
@@ -9,6 +9,8 @@ function AddSubject({ lecture, sbjt, deadline, content, onAddSubject }) {
   const [txtDeadline, setDeadline] = useState("");
   const [txtContent, setContent] = useState("");
 
+  const navigation = useNavigate();
+
   const onSubmit = (event) => {
     event.preventDefault();
     onAddSubject(txtLecture, txtSubject, txtDeadline, txtContent);
@@ -16,6 +18,7 @@ function AddSubject({ lecture, sbjt, deadline, content, onAddSubject }) {
     setSubject("");
     setDeadline("");
     setContent("");
+    navigation("/");
   };
   return (
     <div>
