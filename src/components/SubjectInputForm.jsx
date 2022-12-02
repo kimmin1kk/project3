@@ -1,26 +1,62 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import styles from "../styles/SubjectInputForm.module.css";
 
 function SubjectInputForm({
+  subject = [],
   id = "",
-  lecture = "",
-  sbjt = "",
-  deadline = "",
-  content = "",
+  // lecture = "",
+  // sbjt = "",
+  // deadline = "",
+  // content = "",
   onUpdate = (f) => f,
 }) {
-  const [txtLecture, setLecture] = useState(lecture);
-  const [txtSubject, setSubject] = useState(sbjt);
-  const [txtDeadline, setDeadline] = useState(deadline);
-  const [txtContent, setContent] = useState(content);
+  const [subjects, setSubjects] = useState({
+    id: "",
+    lecture: "",
+    sbjt: "",
+    deadline: "",
+    content: "",
+  });
+
+  useEffect(() => {
+    setSubjects(
+      subject.find((sub) => {
+        return sub.id === id;
+      })
+    );
+  });
+
+  const changeSubjects = (key, value) => {
+    setSubjects((current) => {
+      let newSubjects = { ...current };
+      newSubjects[key] = value;
+      return newSubjects;
+    });
+  };
+  // const [txtLecture, setLecture] = useState(lecture);
+  // const [txtSubject, setSubject] = useState(sbjt);
+  // const [txtDeadline, setDeadline] = useState(deadline);
+  // const [txtContent, setContent] = useState(content);
 
   const onSubmit = (event) => {
     event.preventDefault();
-    onUpdate(id, txtLecture, txtSubject, txtDeadline, txtContent);
-    setLecture("");
-    setSubject("");
-    setDeadline("");
-    setContent("");
+    onUpdate(
+      subjects.id,
+      subjects.lecture,
+      subjects.sbjt,
+      subjects.deadline,
+      subjects.content
+    );
+    changeSubjects("lecture", "");
+    changeSubjects("subject", "");
+    changeSubjects("deadline", "");
+    changeSubjects("content", "");
+
+    // setLecture("");
+    // setSubject("");
+    // setDeadline("");
+    // setContent("");
   };
 
   return (
@@ -28,29 +64,31 @@ function SubjectInputForm({
       <form onSubmit={onSubmit}>
         <input
           type="text"
-          value={txtLecture}
+          value={subjects.lecture}
           placeholder="과목명을 입력하세요."
-          onChange={(event) => setLecture(event.target.value)}
+          onChange={(event) => changeSubjects("lecture", event.target.value)}
         ></input>
         <input
           type="text"
-          value={txtSubject}
+          value={subjects.sbjt}
           placeholder="과제명을 입력하세요"
-          onChange={(event) => setSubject(event.target.value)}
+          onChange={(event) => changeSubjects("sbjt", event.target.value)}
         ></input>
         <input
           type="date"
-          value={txtDeadline}
+          value={subjects.deadline}
           placeholder="마감 날짜를 정해주세요"
-          onChange={(event) => setDeadline(event.target.value)}
+          onChange={(event) => changeSubjects("deadline", event.target.value)}
         ></input>
         <textarea
           rows="20"
           cols="100"
-          value={txtContent}
-          onChange={(event) => setContent(event.target.value)}
+          value={subjects.content}
+          onChange={(event) => changeSubjects("content", event.target.value)}
         ></textarea>
-        <input type="submit" value={"수정"}></input>
+        <button type="submit" className={styles.add}>
+          <span class="material-symbols-outlined">done</span>
+        </button>
       </form>
     </div>
   );

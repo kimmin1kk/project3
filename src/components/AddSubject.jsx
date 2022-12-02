@@ -49,14 +49,9 @@ function AddSubject({ lecture, sbjt, deadline, content, onAddSubject }) {
           <span class="material-symbols-outlined">done</span>
         </button>
       </form>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+
       <Link to="/">
-        <span>돌아가기</span>
+        <span class="material-symbols-outlined">arrow_back</span>
       </Link>
     </div>
   );

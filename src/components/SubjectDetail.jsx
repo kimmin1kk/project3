@@ -24,32 +24,34 @@ function SubjectDetail({ subjects = [], onUpdate = (f) => f }) {
   return (
     <div>
       <div>
-        {/* <p>{subject.lecture}</p>
-        <p>{subject.sbjt}</p>
-        <p>{subject.deadline}</p>
-        <pre>{subject.content}</pre> */}
-
         <button
+          className={styles.editbtn}
           onClick={() => (editable ? setEditable(false) : setEditable(true))}
         >
-          변경하기
+          <span class="material-symbols-outlined">edit</span>
         </button>
         {editable ? (
           <SubjectInputForm
-            id={subject.id}
+            subject={subjects}
+            id={subjectId.id}
             onUpdate={onUpdate}
           ></SubjectInputForm>
         ) : (
           <div>
-            <p className={styles.sblock}>
-              과목 : {subject.lecture} 과제 : {subject.sbjt} 마감일 :{" "}
-              {subject.deadline}
+            <p>
+              <span className={styles.ssblock}>과목 : {subject.lecture}</span>{" "}
+              <span className={styles.ssblock}>과제 : {subject.sbjt}</span>{" "}
+              <span className={styles.ssblock}>
+                마감일 : {subject.deadline}
+              </span>
             </p>
             <pre className={styles.detailbox}>{subject.content}</pre>
           </div>
         )}
         <Link to="/">
-          <button>돌아가기</button>
+          <button className={styles.canbtn}>
+            <span className="material-symbols-outlined">arrow_back</span>
+          </button>
         </Link>
       </div>
     </div>
