@@ -15,11 +15,23 @@
   color: white;
   background-color: #9fd3c7;
 }
-.canbtn {
+/* .canbtn {
   border: 2px solid #e7e7e7;
   cursor: pointer;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
+} */
+
+.canbtn {
+  border: 2px solid #e7e7e7;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.canbtn:hover {
+  background-color: #cf4444;
 }
 
 .detailbox {
