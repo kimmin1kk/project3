@@ -5,7 +5,7 @@
 1. npm create-react-app “name”
 2. npm install react-router-dom 
     1. index.js 들어가서 import { BrowserRouter } from “react-router-dom”; 추가 
-    2. index.js 내 <App /> → <BrowserRouter>**<App /></BrowserRouter> 
+    2. index.js 내 "<App /> → <BrowserRouter> <App /></BrowserRouter> "
 
 ## Code
 
