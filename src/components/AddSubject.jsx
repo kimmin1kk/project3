@@ -52,11 +52,12 @@ function AddSubject({ lecture, sbjt, deadline, content, onAddSubject }) {
           <span class="material-symbols-outlined">done</span>
         </button>
       </form>
-      <button type="click" className={styles.backbtn}>
-        <Link to="/">
-          <span class="material-symbols-outlined">arrow_back</span>
-        </Link>
-      </button>
+
+      <Link to="/">
+        <button type="submit" className={styles.back}>
+        <span class="material-symbols-outlined">arrow_back</span>
+        </button>
+      </Link>
     </div>
   );
 }

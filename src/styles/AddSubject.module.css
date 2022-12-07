@@ -7,17 +7,19 @@
 }
 
 .add:hover {
+  color:white;
   background-color: #cbf078;
 }
 
-.backbtn {
+.back {
   border: 2px solid #e7e7e7;
-  border-radius: 5px;
   cursor: pointer;
+  border-radius: 2px;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
 
-.backbtn:hover {
-  background-color: #cf4444;
+.back:hover {
+  color:white;
+  background-color: #de5353;
 }

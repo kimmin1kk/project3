@@ -13,6 +13,7 @@ function Updater(props) {
     <div>
       <h2>수정중입니다.</h2>
     </div>
+    //평소에는 뜰 일이 없음
   );
 }
 
