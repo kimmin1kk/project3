@@ -75,7 +75,7 @@ function SubjectInputForm({
         <input
           type="text"
           value={subjects.sbjt}
-          placeholder="과제명을 입력하세요"
+          placeholder="과제명을 입력x하세요"
           onChange={(event) => changeSubjects("sbjt", event.target.value)}
         ></input>
         <input
